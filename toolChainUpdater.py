@@ -47,7 +47,7 @@ MAX_DOCS= 1000
 # gets the next check point: will be 1 minute before last run was started (so we have some overlap)
 def getNextCheckPoint():
     rawDate= str(datetime.datetime.utcnow() - datetime.timedelta(minutes=1))[:16]
-    return rawDate.replace(' ', 'T')
+    return rawDate.replace(' ', '  T')
 
 def setNextCheckPoint(aDate):
     global START_KEY
