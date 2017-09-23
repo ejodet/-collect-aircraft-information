@@ -1,0 +1,11 @@
+applications:
+- path: .
+  memory: 2048M
+  instances: 1
+  buildpack: python_buildpack
+  domain: stage1.mybluemix.net
+  name: collect-aircraft-information
+  host: collect-aircraft-information
+  disk_quota: 1024M
+  no-route: true
+  command: python toolChainUpdater.py
